@@ -1,0 +1,22 @@
+application: jenprogvin
+version: 2-mako
+runtime: python27
+api_version: 1
+threadsafe: false
+
+handlers:
+- url: /js
+  static_dir: js
+
+- url: /img
+  static_dir: img
+
+- url: /css
+  static_dir: css
+
+- url: /.*
+  script: handlers.app
+  login: required
+
+builtins:
+- appstats: on
