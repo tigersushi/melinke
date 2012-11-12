@@ -1,5 +1,5 @@
-application: jenprogvin
-version: 2-mako
+application: melinkeproj
+version: 1
 runtime: python27
 api_version: 1
 threadsafe: false
@@ -15,8 +15,8 @@ handlers:
   static_dir: css
 
 - url: /.*
-  script: handlers.app
-  login: required
+  static_files: home.html
+  upload: home.html
 
-builtins:
-- appstats: on
+- url: /.*
+  script: handlers.app
